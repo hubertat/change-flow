@@ -17,6 +17,11 @@ A workflow for coherent application changes carried out with agents: the user's 
 2. Add the section below to the repository's root `AGENTS.md`, creating the file if needed; do not overwrite unrelated instructions.
 3. Make every agent tool in use load that section. Tools that read `AGENTS.md` (such as Codex) need nothing more. Claude Code reads `CLAUDE.md`: add the line `@AGENTS.md` to the root `CLAUDE.md` so it imports the same text. Keep one copy of the section; do not maintain it in two files.
 4. Check existing global and repository instructions for a competing planning rule, such as a required `IMPLEMENTATION_PLAN.md`, and exempt tracked changes from it where it is defined. The section below also states the precedence, for instructions that cannot be edited.
+5. Look for plans or change records that predate this workflow, in any format, and ask the user once where they live and what they are. Then:
+   - Leave them as history by default. Do not convert completed plans: that would mean inventing reviews, approvals and commit references that never happened.
+   - Add one line to the `AGENTS.md` section naming their location, for example: "Plans under `docs/plans/` predate Change Flow; treat them as history and do not convert them."
+   - Let an unfinished old plan finish under its old format, or start a new change that names the old plan as its source.
+   - If old records already use `CHG-NNN` IDs or live in `changes/`, continue new IDs after the highest existing number.
 
 ```markdown
 ## Tracked changes

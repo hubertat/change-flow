@@ -1,6 +1,6 @@
 # Change Flow
 
-Version: 1.0 · 2026-11-18
+Version: 1.1 · 2026-11-18
 
 ## How to read this
 
@@ -261,7 +261,7 @@ After closure, preserve the change folder as history. Update current architectur
 At the start of a session:
 
 1. Read applicable repository instructions and this specification.
-2. Locate the selected change and its coordinating record or supplied handoff. If multiple changes are plausible and context does not resolve the choice, ask which one applies.
+2. Locate the selected change and its coordinating record or supplied handoff. If multiple changes are plausible and context does not resolve the choice, ask which one applies. Plans that predate this workflow, as named in `AGENTS.md`, are history and not change records: read them for context, but do not resume, convert or update them as tracked changes unless the user asks.
 3. Read user input when present, overall and relevant scoped plans, review decisions, and implementation progress. Establish approved revisions, unresolved questions and the next authorized step.
 4. Compare the recorded state with the actual working tree and available code/commit/test evidence. Do not overwrite unrelated work or assume old verification still covers changed code.
 5. Continue within existing authorization. If blocked, ask only for the missing decision and continue independent authorized work where possible.
