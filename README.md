@@ -15,7 +15,7 @@ A workflow for coherent application changes carried out with agents: the user's 
 
 1. Copy `change-flow.md` and the `change-flow/` folder into the repository's `docs/`.
 2. Add the section below to the repository's root `AGENTS.md`, creating the file if needed; do not overwrite unrelated instructions.
-3. Make every agent tool in use load that section. Tools that read `AGENTS.md` (such as Codex) need nothing more. Claude Code reads `CLAUDE.md`: add the line `@AGENTS.md` to the root `CLAUDE.md` so it imports the same text. Keep one copy of the section; do not maintain it in two files.
+3. Make every agent tool in use load that section. Codex reads `AGENTS.md`, and so does Claude Code 2.1.277 or later when the repository has no `CLAUDE.md`. If the repository also has a `CLAUDE.md`, or uses an older Claude Code, add the line `@AGENTS.md` to that `CLAUDE.md` so it imports the same text. Keep one copy of the section; do not maintain it in two files.
 4. Check existing global and repository instructions for a competing planning rule, such as a required `IMPLEMENTATION_PLAN.md`, and exempt tracked changes from it where it is defined. The section below also states the precedence, for instructions that cannot be edited.
 5. Look for plans or change records that predate this workflow, in any format, and ask the user once where they live and what they are. Then:
    - Leave them as history by default. Do not convert completed plans: that would mean inventing reviews, approvals and commit references that never happened.

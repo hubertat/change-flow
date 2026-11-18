@@ -1,6 +1,6 @@
 # Change Flow
 
-Version: 1.1 · 2026-11-18
+Version: 1.1.1 · 2026-11-18
 
 ## How to read this
 
